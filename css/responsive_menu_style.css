@@ -1,0 +1,190 @@
+/*Style sheet of the Responsive jQuery Fixed Navigation Menu by Fabian Lins*/
+
+/*These are the variables. Keep in mind that variables can cause issues if you need to support older browers.*/
+/*For older browsers, you need to replace the variables using [CTRL+F].*/
+:root{
+
+/*Font*/
+
+/*The font is declared in the .menu selector. If your font is declared in a parent div feel free to delete the attribute and variable.*/
+    --menu-font:sans-serif;
+
+/*Colors*/
+
+/*The property of the colors is declared as background, NOT as background-color!*/
+/*This means you can use hex codes (like in the example) but you can also make use of rgb(a) and gradients.*/
+
+    /*menu colors*/
+    
+    --menu_background_color:#dedede;
+    --menu_font_color:#101010;
+        /*TIP! You can swap the colors above, so the mouseover will swap the background and font colors*/
+    --row_01-mouseover_background_color:#101010;
+    --row_01-mouseover_font_color:#dedede;
+
+    /*row_01-content (drop down content) colors*/
+
+    --row_01-content_background_color:#f2f2f2;
+    --row_01-content_link_font_color:#535353;
+        /*TIP! You can use the same colors as above, so the mouseover will swap the background and font colors*/
+    --row_01-content_mouseover_color:#535353;
+    --row_01-content_mouseover_font_color:#f2f2f2;
+
+    /*burger_menu_icon color*/
+
+        /*TIP! You can use the same color as the --menu_font_color, so the burger menu icon has the same color as the menu font.*/
+    --burger_menu_icon_background_color:#101010;
+
+    /*Burger Menu link colors color*/
+
+        /*These colors are used when you activate the burger menu*/
+        /*TIP: Use the same color as the --row_01-content_mouseover_color and --row_01-content_mouseover_font_color.*/
+    --burger_menu_row_01_background_color:#535353;
+    --burger_menu_row_01_font_color:#f2f2f2;
+        /*TIP! You can swap the colors above.*/
+    --burger_menu_background_color:#f2f2f2;
+    --burger_menu_font_color:#535353;
+
+    /*Burger Menu active color*/
+
+        /*TIP! You can use the --burger_menu_icon_background_color.*/
+    --burger_menu_active_background_color:#101010;
+        /*TIP! You can use the --menu_background_color.*/
+    --burger_menu_active_icon_background_color:#dedede;
+
+/*Sizes*/
+
+    /*row_01 sizes*/
+
+    --row_01_padding:16px;
+    --row_01_font_size:16px;
+
+    /*row_01-content (drop down content) sizes*/
+
+    --row_01-content_width:160px;
+    --row_01-content_link_padding:12px;
+    --row_01-content_rounded_corners:5px;
+
+    /*burger_menu_icon*/
+
+        /*The burger_menu_position can either be left or right*/
+    --burger_menu_position:left;
+    --burger_menu_icon_padding:10px;
+    --burger_menu_icon_width:35px;
+    --burger_menu_icon_height:5px;
+    --burger_menu_icon_borders:2px;
+}
+
+.menu{
+    background:var(--menu_background_color);
+    color:var(--menu_font_color);
+    width:100%;
+    background-repeat: no-repeat!important;
+    font-family:var(--menu-font);
+}
+
+/* The first row <div> - needed to position the dropdown content */
+.row_01 {
+    position: relative;
+    display: inline-block;
+    padding: var(--row_01_padding);
+    font-size: var(--row_01_font_size);
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.row_01-content{
+    position: absolute;
+    z-index:1;
+    min-width: var(--row_01-content_width);
+    background: var(--row_01-content_background_color);
+    cursor: pointer;
+    border-radius: 0px 0px var(--row_01-content_rounded_corners) var(--row_01-content_rounded_corners);
+}
+
+.row_01-content_no_boders{
+    border-radius: 0px!important;
+}
+
+/* Links inside the dropdown */
+.row_01-content a{
+    color:var(--row_01-content_link_font_color);
+    padding: var(--row_01-content_link_padding);
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.row_01-content a:hover {
+    background:var(--row_01-content_mouseover_color)!important;
+    color:var(--row_01-content_mouseover_font_color)!important;
+}
+
+/* Hides the dropdown points */
+.hide {
+    display: none!important;
+}
+
+/* Change the background color of the first menu point (first row) when the dropdown content is shown */
+.row_01-mouseover{
+    background-color:var(--row_01-mouseover_background_color)!important;
+    color:var(--row_01-mouseover_font_color)!important;
+}
+
+/* This class will fix the menu */
+.fixed_menu{
+    position: sticky;
+    top: 0;
+}
+
+#burger_menu_icon{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: right;
+    padding:var(--burger_menu_icon_padding);
+
+}
+
+#burger_menu_icon_parent{
+    text-align: var(--burger_menu_position);
+}
+
+.burger_menu_icon_row{
+    background:var(--burger_menu_icon_background_color);
+    width:var(--burger_menu_icon_width);
+    height:var(--burger_menu_icon_height);
+    border-radius: var(--burger_menu_icon_borders);
+}
+
+.transparent{
+    background-color: transparent!important;
+}
+
+.burger_menu_active{
+    display:block!important;
+    position:relative!important;
+    text-align: center!important;
+}
+
+.burger_menu_row_01{
+    background:var(--burger_menu_row_01_background_color)!important;
+    color:var(--burger_menu_row_01_font_color)!important;
+}
+
+.burger_menu_background{
+    background:var(--burger_menu_row_01_background_color)!important;
+    color:var(--burger_menu_row_01_font_color)!important;
+}
+
+.burger_menu_active_color{
+    background:var(--burger_menu_active_background_color)!important;
+}
+
+.burger_menu_icon_active_color{
+    background:var(--burger_menu_active_icon_background_color)!important;
+}
+
+.burger_menu_background_height{
+}
