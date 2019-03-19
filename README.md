@@ -18,7 +18,7 @@ _______________________
 _______________________  
 8. Use [CTRL+F] to replace the variables in the CSS file.
 9. Delete everything in :root{} (INCLUDING the ":root" name and brackets).
-
+_______________________  
 
 You are free to use this menu in commercial projects without giving credit.
 But you are not allowed to claim this menu as your own menu.
