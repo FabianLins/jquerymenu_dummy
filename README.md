@@ -1,8 +1,9 @@
-# jquerymenu_dummy
+# Responsive jQuery Fixed Navigation Menu by Fabian Lins
 This is the first dummy version of my Responsive jQuery Fixed Navigation Menu by Fabian Lins.
 
 
 To use this navigation bar, you have to do a few things:
+# Instruction
 _______________________
 1. Link the "responsive_menu_style.css" file.
 2. Link the current jQuery library (in this case: "jquery-3.3.1.min.js").
@@ -20,6 +21,7 @@ _______________________
 9. Delete everything in :root{} (INCLUDING the ":root" name and brackets).
 _______________________  
 
+# License
 You are free to use this menu in commercial projects without giving credit.
 But you are not allowed to claim this menu as your own menu.
 If you edit the code and change the plugin you are allowed to upload your version as long as you give credit to this project.
