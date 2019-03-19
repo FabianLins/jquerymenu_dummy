@@ -1,10 +1,9 @@
 # Responsive jQuery Fixed Drop Down Menu by Fabian Lins
 This is the first dummy version of my Responsive jQuery Fixed Drop Down Menu by Fabian Lins.
 
-
 To use this navigation bar, you have to do a few things:
+
 # Instruction
-_______________________
 1. Link the "responsive_menu_style.css" file.
 2. Link the current jQuery library (in this case: "jquery-3.3.1.min.js").
   NOTE: Always check for a later version on https://jquery.com/download/
@@ -17,9 +16,8 @@ _______________________
   From here everything is optional but I suggest following this instruction.
   This will make sure you have support for older browsers.
 _______________________  
-8. Use [CTRL+F] to replace the variables in the CSS file.
-9. Delete everything in :root{} (INCLUDING the ":root" name and brackets).
-_______________________  
+8. Use [CTRL+F] to replace the variables within the CSS file.
+9. Delete everything in ":root{}" (INCLUDING the ":root" name and brackets).
 
 # License
 You are free to use this menu in commercial projects without giving credit.
