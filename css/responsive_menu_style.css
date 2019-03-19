@@ -16,43 +16,45 @@
 
     /*menu colors*/
     
-    --menu_background_color:#dedede;
-    --menu_font_color:#101010;
+    --menu_background_color:#252c6b;
+    --menu_font_color:white;
         /*TIP! You can swap the colors above, so the mouseover will swap the background and font colors*/
-    --row_01-mouseover_background_color:#101010;
-    --row_01-mouseover_font_color:#dedede;
+    --row_01-mouseover_background_color:var(--menu_font_color);
+    --row_01-mouseover_font_color:var(--menu_background_color);
 
     /*row_01-content (drop down content) colors*/
 
+        /*TIP! You can use a slightly darker color than --menu_font_color.*/
     --row_01-content_background_color:#f2f2f2;
-    --row_01-content_link_font_color:#535353;
-        /*TIP! You can use the same colors as above, so the mouseover will swap the background and font colors*/
-    --row_01-content_mouseover_color:#535353;
-    --row_01-content_mouseover_font_color:#f2f2f2;
+        /*TIP! You can use the same colors as the --menu_background_color.*/   
+    --row_01-content_link_font_color:var(--menu_background_color);
+        /*TIP! You can use the same colors as above, so the mouseover will swap the background and font colors.*/
+    --row_01-content_mouseover_color:var(--row_01-content_link_font_color);
+    --row_01-content_mouseover_font_color:var( --row_01-content_background_color);
 
     /*burger_menu_icon color*/
 
         /*TIP! You can use the same color as the --menu_font_color, so the burger menu icon has the same color as the menu font.*/
-    --burger_menu_icon_background_color:#101010;
+    --burger_menu_icon_background_color:var(--menu_font_color);
 
     /*Burger Menu link colors color*/
 
-        /*These colors are used when you activate the burger menu*/
+        /*These colors are used when you activate the burger menu.*/
         /*TIP: Use the same color as the --row_01-content_mouseover_color and --row_01-content_mouseover_font_color.*/
-    --burger_menu_row_01_background_color:#535353;
-    --burger_menu_row_01_font_color:#f2f2f2;
-        /*TIP! You can swap the colors above.*/
-    --burger_menu_background_color:#f2f2f2;
-    --burger_menu_font_color:#535353;
+    --burger_menu_row_01_background_color:var(--row_01-content_mouseover_color);
+    --burger_menu_row_01_font_color:var(--row_01-content_mouseover_font_color);
 
     /*Burger Menu active color*/
 
         /*TIP! You can use the --burger_menu_icon_background_color.*/
-    --burger_menu_active_background_color:#101010;
+    --burger_menu_active_background_color:var(--burger_menu_icon_background_color);
         /*TIP! You can use the --menu_background_color.*/
-    --burger_menu_active_icon_background_color:#dedede;
+    --burger_menu_active_icon_background_color:var(--menu_background_color);
 
 /*Sizes*/
+
+    /*Padding between the parent div of the menu and the first element*/
+    --menu-padding-right:100px;
 
     /*row_01 sizes*/
 
@@ -90,6 +92,21 @@
     padding: var(--row_01_padding);
     font-size: var(--row_01_font_size);
     cursor: pointer;
+}
+
+.menu_content{
+    margin-left: var(--menu-padding-right);
+}
+
+.no_menu_content{
+    margin-left: 0px!important;
+}
+
+.row_01 a{
+    font-size: var(--row_01_font_size);
+    text-decoration: none;
+    color:var(--menu_font_color);
+    display: inline-block;
 }
 
 /* Dropdown content (hidden by default) */
@@ -133,9 +150,18 @@
 
 /* This class will fix the menu */
 .fixed_menu{
-    position: sticky;
-    top: 0;
+    position: fixed!important;
+    top: 0!important;
+    
 }
+
+.scrollbar{
+    top: 0!important;
+    bottom:0!important;
+    position:fixed!important;
+    overflow-y:auto!important;
+}
+
 
 #burger_menu_icon{
     position: relative;
@@ -164,8 +190,9 @@
 
 .burger_menu_active{
     display:block!important;
-    position:relative!important;
+    position:sticky!important;
     text-align: center!important;
+    z-index: 1000!important;
 }
 
 .burger_menu_row_01{
@@ -186,5 +213,6 @@
     background:var(--burger_menu_active_icon_background_color)!important;
 }
 
-.burger_menu_background_height{
+.avoid_jump{
+    visibility: hidden;
 }

@@ -6,6 +6,7 @@
 
 .samplebox{
     height:400px;
+    background:lightblue;
 }
 
 .color01{
@@ -19,3 +20,9 @@
  .color03{
     background-color:rgb(175, 183, 187);
  }
+
+ p{
+    font-size:30px;
+    padding:50px;
+    font-family: sans-serif;
+}
