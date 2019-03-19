@@ -1,5 +1,5 @@
-# Responsive jQuery Fixed Navigation Menu by Fabian Lins
-This is the first dummy version of my Responsive jQuery Fixed Navigation Menu by Fabian Lins.
+# Responsive jQuery Fixed Drop Down Menu by Fabian Lins
+This is the first dummy version of my Responsive jQuery Fixed Drop Down Menu by Fabian Lins.
 
 
 To use this navigation bar, you have to do a few things:
