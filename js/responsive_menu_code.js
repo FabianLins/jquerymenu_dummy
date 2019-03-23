@@ -1,15 +1,15 @@
-/*JS file of the Responsive jQuery Fixed Navigation Menu by Fabian Lins*/
+/*JS file of the Responsive jQuery Fixed Drop Down Menu by Fabian Lins*/
 
 $(document).ready(function() {
 
-	/*Change this variable to adjust the width for the mobile view. Make sure you keep the qutation marks and px.*/
+	/*Change this variable to adjust the width for the mobile view. Make sure you keep the qutation marks and px - for example: "1023px".*/
 	change_menu_to_mobile_view="1023px";
 
 	/*Change this variable to adjust the speed for sliding up/ down the burger menu. Only affects the mobile view.*/
 	burger_menu_slide_speed=330;
 
 	/*Change this variable to adjust the speed when you scroll to the same page.*/
-	scroll_speed=500;
+	menu_scroll_speed=500;
 
 	/*DON'T CHANGE THIS VARIABLE!*/
 	burger_menu_active=false;
@@ -79,7 +79,7 @@ $(document).ready(function() {
 	}
 
 	/* Checks for the screen size and decides either the desktop or burger menu needs to be used.*/
-	function mediaQuery(){
+	function mediaQueryMenu(){
 		if (window.matchMedia("(max-width:"+change_menu_to_mobile_view+")").matches) {
 			$(".row_01").addClass("hide");
 			$("#burger_menu_icon").removeClass("hide");
@@ -112,12 +112,12 @@ $(document).ready(function() {
 		}
 	}
 
-	mediaQuery();
+	mediaQueryMenu();
 
 	yoffset();
 
 	$(window).on('resize', function(){
-		mediaQuery();
+		mediaQueryMenu();
 		if (burger_menu_active===true){
 			burgerMenuUnactive();
 		}		
@@ -233,23 +233,22 @@ $(document).ready(function() {
 		if(fixed_menu_active===true) {
 			$("html, body").animate({
 				scrollTop: $(this_href).offset().top-$(".menu").outerHeight()
-			}, scroll_speed);
+			}, menu_scroll_speed);
 		}
 		else{
 			fixed_menu_onclick=true;
-			var top = ($(document).scrollTop()).toString();
 				$(".menu").addClass("fixed_menu");
 				current_menu_height=($(".menu").outerHeight()).toString()+"px";
 				$(".menu_height").css({"height":current_menu_height});
 				$(".avoid_jump").show();
 				$("html, body").animate({
 					scrollTop: $(this_href).offset().top-$(".menu").outerHeight()
-				}, scroll_speed);
+				}, menu_scroll_speed);
 				$(".menu").removeClass("menu_smooth_transition");
 				$(".menu").removeClass("transform");
 				setTimeout(function(){
 					fixed_menu_onclick=false;
-				},scroll_speed);
+				},menu_scroll_speed);
 		}
 	});
 });
