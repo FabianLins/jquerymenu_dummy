@@ -1,4 +1,4 @@
-/*Style sheet of the Responsive jQuery Fixed Navigation Menu by Fabian Lins*/
+/*Style sheet of the Responsive jQuery Fixed Drop Down Menu by Fabian Lins*/
 
 /*These are the variables. Keep in mind that variables can cause issues if you need to support older browers.*/
 /*For older browsers, you need to replace the variables using [CTRL+F].*/
@@ -6,7 +6,7 @@
 
 /*Font*/
 
-/*The font is declared in the .menu selector. If your font is declared in a parent div feel free to delete the attribute and variable.*/
+    /*The font is declared in the .menu selector. If your font is declared in a parent div feel free to delete the attribute and variable.*/
     --menu-font:sans-serif;
 
 /*Colors*/
@@ -16,7 +16,7 @@
 
     /*menu colors*/
     
-    --menu_background_color:#252c6b;
+    --menu_background_color:#006f9e;
     --menu_font_color:white;
         /*TIP! You can swap the colors above, so the mouseover will swap the background and font colors*/
     --row_01-mouseover_background_color:var(--menu_font_color);
