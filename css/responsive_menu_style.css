@@ -83,6 +83,7 @@
     width:100%;
     background-repeat: no-repeat!important;
     font-family:var(--menu-font);
+    position:absolute;
 }
 
 /* The first row <div> - needed to position the dropdown content */
@@ -117,6 +118,7 @@
     background: var(--row_01-content_background_color);
     cursor: pointer;
     border-radius: 0px 0px var(--row_01-content_rounded_corners) var(--row_01-content_rounded_corners);
+    overflow-y:auto!important;
 }
 
 .row_01-content_no_boders{
@@ -132,7 +134,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.row_01-content a:hover {
+.row_01-content a:hover, .row_01-content a:focus{
     background:var(--row_01-content_mouseover_color)!important;
     color:var(--row_01-content_mouseover_font_color)!important;
 }
@@ -170,8 +172,12 @@
     vertical-align: middle;
     text-align: right;
     padding:var(--burger_menu_icon_padding);
-
 }
+
+#burger_menu_icon:hover, #burger_menu_icon:focus{
+    opacity: 0.7;
+}
+
 
 #burger_menu_icon_parent{
     text-align: var(--burger_menu_position);
@@ -211,8 +217,4 @@
 
 .burger_menu_icon_active_color{
     background:var(--burger_menu_active_icon_background_color)!important;
-}
-
-.avoid_jump{
-    visibility: hidden;
 }
