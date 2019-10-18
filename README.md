@@ -20,7 +20,7 @@ _______________________
 9. Delete everything in ":root{}" (INCLUDING the ":root" name and brackets).
 
 # Bugs
-- ~~External links do not work.~~ **FIXED**
+- ~~External links do not work.~~ **FIXED** (2019/10/18)
 
 # License
 You are free to use this menu in commercial projects without giving credit.
