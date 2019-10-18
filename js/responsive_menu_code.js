@@ -342,32 +342,36 @@ $(document).ready(function() {
 			}, menu_scroll_speed);
 		}
 		else{
-			e.preventDefault();
-			$(this).prop('disabled', true);
-			if (burger_menu_active===false) {
-				$(".row_01-content:eq("+current_index+")").addClass("hide");
+			if((isExternal(navbar_text_link)==true) || (navbar_text_link.includes("/")==true) || (navbar_text_link.includes(".html")==true)){
+				//do nothing
 			}
-			fixed_menu_onclick=true;
-			var current_menu_top_position=($(".menu").offset().top)+"px";
-			$(".menu").addClass("menu_top_transform");
-			$(".menu_top_transform").css({"top":current_menu_top_position});
-			$(".menu_top_transform").animate({
-				top: $(document).scrollTop()+"px"
-			},menu_to_top_scroll_speed);
-			setTimeout(function(){
+			else{
+				e.preventDefault();
+				$(this).prop('disabled', true);
+				if (burger_menu_active===false) {
+					$(".row_01-content:eq("+current_index+")").addClass("hide");
+				}
+				fixed_menu_onclick=true;
+				var current_menu_top_position=($(".menu").offset().top)+"px";
+				$(".menu").addClass("menu_top_transform");
 				$(".menu_top_transform").css({"top":current_menu_top_position});
-				$(".menu").removeClass("menu_top_transform");
-				$(".menu").addClass("fixed_menu");
-				$("html, body").animate({
-					scrollTop: $(this_href).offset().top-current_menu_height
-				}, menu_scroll_speed);
+				$(".menu_top_transform").animate({
+					top: $(document).scrollTop()+"px"
+				},menu_to_top_scroll_speed);
 				setTimeout(function(){
-					fixed_menu_onclick=false;
-					burger_menu_active=false;
-				},menu_scroll_speed);
-			},menu_to_top_scroll_speed+50);
+					$(".menu_top_transform").css({"top":current_menu_top_position});
+					$(".menu").removeClass("menu_top_transform");
+					$(".menu").addClass("fixed_menu");
+					$("html, body").animate({
+						scrollTop: $(navbar_text_link).offset().top-current_menu_height
+					}, menu_scroll_speed);
+					setTimeout(function(){
+						fixed_menu_onclick=false;
+						burger_menu_active=false;
+					},menu_scroll_speed);
+				},menu_to_top_scroll_speed+50);
+			}
 		}
-
 		burger_menu_expanded=false;
 		document.activeElement.blur();
 	});
