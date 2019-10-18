@@ -1,6 +1,9 @@
 # Responsive jQuery Fixed Drop Down Menu by Fabian Lins
 This is the first dummy version of my Responsive jQuery Fixed Drop Down Menu by Fabian Lins.
 
+Check this link for a preview:
+https://fabianlins.github.io/jquerymenu_dummy
+
 To use this navigation bar, you have to do a few things:
 
 # Instruction
@@ -21,6 +24,7 @@ _______________________
 
 # Bugs
 - ~~External links do not work.~~ **FIXED** (2019/10/18)
+- ~~The menu scrolls to top while visiting an external link.~~ **FIXED** (2019/10/18)
 
 # License
 You are free to use this menu in commercial projects without giving credit.
@@ -29,5 +33,8 @@ If you edit the code and change the plugin you are allowed to upload your versio
 
 If you have any questions feel free to write me an e-Mail:
 contact@fabianlins.com
+
+# Note
+This is a practice task meant for improving my front end skills. I highly suggest checking this project carefully before you use it for a commercial project.
 
 Thanks for your attention.
