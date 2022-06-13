@@ -1,3 +1,6 @@
+# DISCLAMER!
+This was one of my first web development beginner projects made years ago. I disadvise against using it due to lacking experience. The reason why you can find this is to show my progess as web developer.
+
 # Responsive jQuery Fixed Drop Down Menu by Fabian Lins
 This is the first dummy version of my Responsive jQuery Fixed Drop Down Menu by Fabian Lins.
 
